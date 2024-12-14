@@ -1,0 +1,158 @@
+{
+"#name"
+:
+{
+"version"
+:
+null
+,
+"cn"
+:
+"查看 x-cmd 版本或校验 x-cmd"
+,
+"en"
+:
+"View the x-cmd version or verify x-cmd"
+}
+,
+"current"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"查看当前版本信息"
+,
+"en"
+:
+"View current version information"
+}
+}
+,
+"sum"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"打印当前版本的校验和"
+,
+"en"
+:
+"Print the checksum of the current version"
+}
+}
+,
+"calsum"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"重新计算校验和"
+,
+"en"
+:
+"Recalculate checksum"
+}
+}
+,
+"verify"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"校验 x-cmd（仅校验当前版本）"
+,
+"en"
+:
+"Validate x-cmd (only validate current version)"
+}
+}
+,
+"ls"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"列出所有版本信息"
+,
+"en"
+:
+"List all versions info"
+}
+,
+"--nv"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"使用交互式 app"
+,
+"en"
+:
+"Use an interactive app"
+}
+}
+,
+"--yml"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"以 YML 格式输出"
+,
+"en"
+:
+"Output in YML"
+}
+}
+,
+"--json"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"以 JSON 格式输出"
+,
+"en"
+:
+"Output in JSON"
+}
+}
+}
+,
+"#other"
+:
+{
+"en"
+:
+"\"Please visit our homepage for more information:\": \"https://x-cmd.com\"\n"
+,
+"cn"
+:
+"\"请访问我们的主页以获取更多信息：\": \"https://x-cmd.com\"\n"
+}
+}
+

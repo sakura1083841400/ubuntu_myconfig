@@ -1,0 +1,10 @@
+md5=
+sha1=
+sha256=1a8323830c57800e619a4c483b8a4418af8a05c7d29518fb245cd0fbc982613a
+sha512=
+download_file_ext=tar.xz
+unpack=folder
+npm=yes
+url_cn=https://github.com/x-cmd-build/yazi/releases/download/0.3.3/linux.x64.musl.tar.xz
+npmurl_cn=https://registry.npmmirror.com/@x-cmd-pkg/yazi/-/yazi-0.0.0-v0.3.3-linux.x64.musl.tgz
+tree=linux.x64.musl

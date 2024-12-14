@@ -1,0 +1,54 @@
+{
+  "base-en-v1.5": {
+    "f32": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-base-en-v1.5-gguf/resolve/main/bge-base-en-v1.5-f32.gguf",
+      "quant-method": "F32",
+      "size": "417 MB"
+    },
+    "f16": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-base-en-v1.5-gguf/resolve/main/bge-base-en-v1.5-f16.gguf",
+      "quant-method": "F16",
+      "size": "209 MB"
+    },
+    "q8_0": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-base-en-v1.5-gguf/resolve/main/bge-base-en-v1.5-q8_0.gguf",
+      "quant-method": "Q8_0",
+      "size": "113 MB"
+    },
+    "Q4_K_M": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-base-en-v1.5-gguf/resolve/main/bge-base-en-v1.5-q4_k_m.gguf",
+      "quant-method": "Q4_K_M",
+      "size": "66 MB"
+    }
+  },
+  "base-zh-v1.5": {
+    "f32": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-large-zh-v1.5-gguf/resolve/main/bge-large-zh-v1.5-f32.gguf",
+      "quant-method": "F32",
+      "size": "1.3 GB"
+    },
+    "f16": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-large-zh-v1.5-gguf/resolve/main/bge-large-zh-v1.5-f16.gguf",
+      "quant-method": "F16",
+      "size": "620 MB"
+    },
+    "q8_0": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-large-zh-v1.5-gguf/resolve/main/bge-large-zh-v1.5-q8_0.gguf",
+      "quant-method": "Q8_0",
+      "size": "332 MB"
+    },
+    "Q4_K_M": {
+      "format": "gguf",
+      "hf": "CompendiumLabs/bge-large-zh-v1.5-gguf/resolve/main/bge-large-zh-v1.5-q4_k_m.gguf",
+      "quant-method": "Q4_K_M",
+      "size": "193 MB"
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+"#name"
+:
+{
+"ascii"
+:
+null
+,
+"cn"
+:
+"处理与 ASCII 相关的任务"
+,
+"en"
+:
+"Tackling tasks related to ASCII"
+}
+,
+"#desc"
+:
+{
+"cn"
+:
+"ascii 模块是为处理 ASCII 相关任务（如查询 ASCII 码表、以 ASCII 艺术画显示字符、图片和艺术烟花等）而设计的模块。\n除了 table 子命令采用 shell/awk 实现外，其余的命令都采用 pkg 或 npm 来按需下载运行，例如 cfont 和 map 采用托管在 npm 上的模块，并通过 deno 以最小权限方式按需下载运行。\n"
+,
+"en"
+:
+"The ascii module is designed to handle tasks related to ASCII, such as looking up the ASCII code table, displaying characters, pictures, and artistic fireworks in ASCII artwork.\nExcept for the table subcommand implemented in shell/awk, the rest of the commands use pkg or npm to download and run on demand, for example, cfont and map use modules hosted on npm and download and run on demand with least privilege through deno.\n"
+}
+,
+"#subcmd:Table"
+:
+[
+"0x|0??|1??"
+,
+"^?"
+,
+"?"
+]
+,
+"table"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"查询 ASCII 码列表"
+,
+"en"
+:
+"Look up the ASCII code table"
+}
+,
+"$ref"
+:
+"x-advise://ascii/data/table.jso"
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x ascii --csv"
+,
+"en"
+:
+"To output a list of ASCII codes in CSV format"
+,
+"cn"
+:
+"以 CSV 格式输出 ascii 码列表"
+}
+,
+{
+"cmd"
+:
+"x ascii lower"
+,
+"en"
+:
+"List all the ASCII codes corresponding to lowercase letters"
+,
+"cn"
+:
+"列出所有小写字母对应的 ascii 码"
+}
+,
+{
+"cmd"
+:
+"x ascii ^A"
+,
+"en"
+:
+"Return the ASCII code corresponding to Ctrl-A"
+,
+"cn"
+:
+"返回 ctrl-A 对应的 ascii 码"
+}
+,
+{
+"cmd"
+:
+"x ascii 0x11"
+,
+"en"
+:
+"Return the ASCII code corresponding to Ctrl-A"
+,
+"cn"
+:
+"返回 0x11 对应的 ascii 码"
+}
+]
+}
+,
+"cfonts|cfont"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"将字符串转为 ASCII 艺术字"
+,
+"en"
+:
+"Transforming a string into ASCII art"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"String"
+,
+"cn"
+:
+"字符串"
+}
+}
+}
+,
+"imagec"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"采用 ascii-image-converter 将图片转为 ASCII 艺术画"
+,
+"en"
+:
+"Transforming an image into ASCII art using ascii-image-converter"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"Image"
+,
+"cn"
+:
+"图片"
+}
+,
+"#exec"
+:
+"___x_cmd_advise__file"
+}
+}
+,
+"map"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"查看世界地图"
+,
+"en"
+:
+"Take a look at the world map"
+}
+,
+"#tip"
+:
+[
+{
+"cn"
+:
+"支持鼠标控制，您可以拖动地图并使用滚轮放大和缩小"
+,
+"en"
+:
+"Mouse control is supported. You can drag the map and use the scroll wheel to zoom in and out"
+}
+,
+{
+"cn"
+:
+"支持键盘快捷键：\n- 向上、向下、向左、向右箭头能拖动地图\n- 按 a 或 z 键能放大和缩小地图\n- 按 c 键切换为块字符模式\n- 按 q 键退出\n"
+,
+"en"
+:
+"Keyboard shortcuts:\n- Arrows up, down, left, right to scroll around\n- Press a or z to zoom in and out\n- Press c to switch to block character mode\n- Press q to quit\n"
+}
+]
+}
+,
+"graph"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"绘制 ASCII 折线图"
+,
+"en"
+:
+"Drawing an ASCII Line Graph"
+}
+}
+,
+"mermaid"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"在终端中渲染 Mermaid 图表"
+,
+"en"
+:
+"Render Mermaid graphs inside your terminal"
+}
+}
+,
+"firework"
+:
+{
+"#desc"
+:
+{
+"cn"
+:
+"下载并运行 firework-rs 来模拟 ASCII 艺术烟花（按 esc 退出程序）"
+,
+"en"
+:
+"Download and run firework-rs to simulate ASCII art fireworks (Press esc to exit the program)"
+}
+,
+"$ref"
+:
+"x-cmd-advise://firework/advise.t.jso"
+}
+,
+"$ref"
+:
+"x-advise://ascii/data/table.jso"
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x ascii"
+,
+"cn"
+:
+"查看 ASCII 码列表"
+,
+"en"
+:
+"View the list of ASCII codes"
+}
+,
+{
+"cmd"
+:
+"x ascii cfont x-cmd"
+,
+"cn"
+:
+"将 x-cmd 字符串转为 ASCII 艺术字"
+,
+"en"
+:
+"Transform the x-cmd string into ASCII art"
+}
+,
+{
+"cmd"
+:
+"x ascii cfont x-cmd -g red,blue"
+,
+"cn"
+:
+"将 x-cmd 字符串转为 ASCII 艺术字并设置渐变色"
+,
+"en"
+:
+"Convert the 'x-cmd' string into ASCII art and apply a gradient color."
+}
+,
+{
+"cmd"
+:
+"x ascii cfont x-cmd -a center -b red"
+,
+"cn"
+:
+"将 x-cmd 字符串转为 ASCII 艺术字并设置背景色和文字居中"
+,
+"en"
+:
+"Convert the 'x-cmd' string into ASCII art, set a background color, and center the text."
+}
+,
+{
+"cmd"
+:
+"x ascii firework -d 1"
+,
+"cn"
+:
+"使用 demo 1 来显示 ASCII 艺术烟花"
+,
+"en"
+:
+"Use demo 1 to display ASCII art fireworks"
+}
+,
+{
+"cmd"
+:
+"seq 1 10 | x ascii graph"
+,
+"cn"
+:
+"绘制 ASCII 折线图"
+,
+"en"
+:
+"Drawing an ASCII Line Graph"
+}
+]
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com"
+}
+}
+}
+

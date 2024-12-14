@@ -1,0 +1,10 @@
+md5=
+sha1=
+sha256=cb3183c4dc1badacd0715b6adb829ca965bdab99cdc1419be03beefafc268f8f
+sha512=
+download_file_ext=tar.gz
+unpack=folder
+npm=yes
+url_cn=https://github.com/x-cmd-build/p7zip/releases/download/v0.0.1/7za_linux_x64.tar.gz
+npmurl_cn=https://registry.npmmirror.com/@x-cmd-pkg/7za/-/7za-0.0.0-v0.0.1-linux.x64.0.tgz
+tree=linux.x64.0

@@ -1,0 +1,190 @@
+{
+"#name"
+:
+{
+"man"
+:
+null
+,
+"en"
+:
+"man command enhancement"
+,
+"cn"
+:
+"man 命令增强"
+}
+,
+"#synopsis"
+:
+[
+{
+"x man [OPTION] [keyword]"
+:
+null
+}
+,
+{
+"x man :[keyword]"
+:
+null
+}
+]
+,
+"-k"
+:
+{
+"#synopsis"
+:
+"<keyword>"
+,
+"#desc"
+:
+{
+"cn"
+:
+"在 man 文档中查找关键字"
+,
+"en"
+:
+"Find keyword in man pages"
+}
+,
+"#1"
+:
+{
+"#desc"
+:
+{
+"en"
+:
+"keyword"
+,
+"cn"
+:
+"关键字"
+}
+}
+}
+,
+"--explain|-e"
+:
+{
+"#subcmd"
+:
+true
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 mankier 解释命令"
+,
+"en"
+:
+"Explain commands using mankier"
+}
+}
+,
+"--fzf"
+:
+{
+"#subcmd"
+:
+true
+,
+"#desc"
+:
+{
+"cn"
+:
+"使用 fzf 列出当前系统上所有的 man 文档"
+,
+"en"
+:
+"List all man pages on the current system using fzf"
+}
+}
+,
+"#tldr"
+:
+[
+{
+"cmd"
+:
+"x man"
+,
+"cn"
+:
+"使用 fzf 列出当前系统上所有的 man 文档"
+,
+"en"
+:
+"List all man pages on the current system using fzf"
+}
+,
+{
+"cmd"
+:
+"x man ssh"
+,
+"en"
+:
+"Show man document for ssh. Show search if it doesn't exists"
+,
+"cn"
+:
+"显示 ssh 的 man 文档。如果不存在则显示搜索"
+}
+,
+{
+"cmd"
+:
+"x man :ssh"
+,
+"en"
+:
+"Show tldr document for ssh"
+,
+"cn"
+:
+"显示 ssh 的 tldr 文档"
+}
+,
+{
+"cmd"
+:
+"x man -k disk"
+,
+"en"
+:
+"List man pages containing \"disk\" using an interactive UI"
+,
+"cn"
+:
+"使用交互式 UI 列出包含 \"disk\" 的 man 文档"
+}
+]
+,
+"#other"
+:
+{
+"en"
+:
+{
+"Please visit our homepage for more information:"
+:
+"https://x-cmd.com"
+}
+,
+"cn"
+:
+{
+"请访问我们的主页以获取更多信息："
+:
+"https://x-cmd.com"
+}
+}
+}
+

@@ -1,0 +1,10 @@
+md5=
+sha1=
+sha256=a701fcd98424d908d90608d8e2d6cac83332c2c8c582776266742a0b46b7cab9
+sha512=
+download_file_ext=tar.xz
+unpack=folder
+npm=yes
+url_cn=https://github.com/x-cmd-build/fzf/releases/download/0.55.0/linux.x64.0.tar.xz
+npmurl_cn=https://registry.npmmirror.com/@x-cmd-pkg/fzf/-/fzf-0.0.0-v0.55.0-linux.x64.0.tgz
+tree=linux.x64.0

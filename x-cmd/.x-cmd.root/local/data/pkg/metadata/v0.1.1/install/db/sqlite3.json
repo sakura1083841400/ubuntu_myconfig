@@ -1,0 +1,46 @@
+{
+  "lang": "C",
+  "homepage": "https://www.sqlite.org/",
+  "desc": {
+    "cn": "一个轻量级的嵌入式关系型数据库管理系统，跨平台支持且使用简单",
+    "en": "A lightweight embedded relational Database management system, cross platform support and easy to use"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install sqlite",
+      "reference": "https://formulae.brew.sh/formula/sqlite#default"
+    },
+    "debian/apt": {
+      "cmd": "sudo apt-get install sqlite3",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "ubuntu/apt": {
+      "cmd": "sudo apt-get install sqlite3",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "alpine/apk": {
+      "cmd": "sudo apk add sqlite",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "arch/pacman": {
+      "cmd": "sudo pacman -S sqlite3",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "kali/apt": {
+      "cmd": "sudo apt-get install sqlite",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "centos/yum": {
+      "cmd": "sudo yum install sqlite",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "fedora/dnf": {
+      "cmd": "sudo dnf install sqlite",
+      "reference": "https://command-not-found.com/sqlite3"
+    },
+    "raspbian/apt": {
+      "cmd": "sudo apt-get install sqlite3",
+      "reference": "https://command-not-found.com/sqlite3"
+    }
+  }
+}

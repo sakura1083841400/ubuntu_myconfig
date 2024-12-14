@@ -1,0 +1,83 @@
+{
+  "homepage": "https://sdkman.io/",
+  "desc": {
+    "cn": "Java 是一种计算机编程语言。它拥有跨平台、面向对象、泛型编程等特性，广泛应用于Web应用开发和移动应用开发",
+    "en": "Java is a computer programming language. It has features such as cross-platform compatibility, object-oriented programming, and generic programming, and is widely used in web application development and mobile application development"
+  },
+  "license": "MIT",
+  "v23.1.2.r21-nik": {
+    "info": {
+      "size": null
+    }
+  },
+  "v23.1.2.r21-mandrel": {
+    "info": {
+      "size": null
+    }
+  },
+  "v22.3.5.r17-nik": {
+    "info": {
+      "size": null
+    }
+  },
+  "v22.3.4.r17-nik": {
+    "info": {
+      "size": null
+    }
+  },
+  "v21.0.2-oracle": {
+    "info": {
+      "size": null
+    }
+  },
+  "v21.0.2-open": {
+    "info": {
+      "size": null
+    }
+  },
+  "v21.0.2-ms": {
+    "info": {
+      "size": null
+    }
+  },
+  "v21.0.2-graal": {
+    "info": {
+      "size": null
+    }
+  },
+  "v21.0.2-amzn": {
+    "info": {
+      "size": null
+    }
+  },
+  "v21.0.1-sem": {
+    "info": {
+      "size": null
+    }
+  },
+  "v18.0.2-sem": {
+    "info": {
+      "size": null
+    }
+  },
+  "v18.0.2-open": {
+    "info": {
+      "size": null
+    }
+  },
+  "v17.0.9-sem": {
+    "info": {
+      "size": null
+    }
+  },
+  "v15.0.2-open": {
+    "info": {
+      "size": null
+    }
+  },
+  "v11.0.21-sem": {
+    "info": {
+      "size": null
+    }
+  }
+}

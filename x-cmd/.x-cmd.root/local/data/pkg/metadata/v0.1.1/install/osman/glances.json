@@ -1,0 +1,14 @@
+{
+  "lang": "python",
+  "homepage": "https://github.com/nicolargo/glances",
+  "desc": {
+    "cn": "Glances 是一个开源系统跨平台监控工具",
+    "en": "Glances is an open-source system cross-platform monitoring tool"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install glances",
+      "reference": "https://github.com/nicolargo/glances?tab=readme-ov-file#homebrew"
+    }
+  }
+}

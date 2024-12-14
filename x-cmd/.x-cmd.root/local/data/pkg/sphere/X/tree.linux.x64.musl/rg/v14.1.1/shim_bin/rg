@@ -1,0 +1,2 @@
+#! /bin/sh
+ "/home/eruka/.x-cmd.root/local/data/pkg/sphere/X/tree.linux.x64.musl/rg/v14.1.1/bin/rg"  "$@"

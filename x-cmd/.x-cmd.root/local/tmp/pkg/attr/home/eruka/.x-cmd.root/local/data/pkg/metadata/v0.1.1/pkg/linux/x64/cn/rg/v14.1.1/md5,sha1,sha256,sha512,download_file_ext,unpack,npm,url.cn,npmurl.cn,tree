@@ -1,0 +1,10 @@
+md5=
+sha1=
+sha256=ce303d9db85fdc9b4f9e12f1d0b95b1c913e581f1f55e107e2d69a7519b28a26
+sha512=
+download_file_ext=tar.xz
+unpack=folder
+npm=yes
+url_cn=https://github.com/x-cmd-build/rg/releases/download/14.1.1/linux.x64.musl.tar.xz
+npmurl_cn=https://registry.npmmirror.com/@x-cmd-pkg/rg/-/rg-0.0.0-v14.1.1-linux.x64.musl.tgz
+tree=linux.x64.musl

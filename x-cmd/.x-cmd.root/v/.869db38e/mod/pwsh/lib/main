@@ -1,0 +1,61 @@
+
+# shellcheck shell=dash
+xrc:mod:lib pwsh    util path ps ip disk part computer service log lsof kill wmi netsh perf \
+                        __setupxcmd  __confirmx __setup
+___x_cmd_pwsh___main(){
+    [ $# -gt 0  ] || set -- --repl
+
+    local op="$1";  shift
+
+    # dev mode
+    case "$op" in
+        --repl)
+            ___x_cmd_pwsh_bin "$@" ;;
+        -PSConsoleFile|-Version|\
+        -NoLogo|-NoProfile|-NonInteractive|-ExecutionPolicy|\
+        -EncodedCommand|-InputFormat|-OutputFormat|\
+        -WindowStyle|-NoExit)
+            ___x_cmd_pwsh_bin "$op" "$@" ;;
+
+        kill|ps|lsof|ip|\
+        disk|part|\
+        computer|service|event|log|path|perf|admin)
+            "___x_cmd_pwsh_${op}" "$@" ;;
+
+        setup|--setup)
+            ___x_cmd_pwsh___setup "$@"  ;;
+        --setup-is-required)
+            ___x_cmd_pwsh___setup_is_required "$@" ;;
+        --setup-rcshortcut-file)
+            ___x_cmd_pwsh___setup_rcshortcut_file "$@" ;;
+        -h|--help)
+            ___x_cmd help -m pwsh "$@" ;;
+        *)
+            ___x_cmd_pwsh_bin "$op" "$@"
+            ;;
+    esac
+}
+
+___x_cmd_pwsh_bin(){
+    if command -v powershell.exe 1>/dev/null; then
+        ___x_cmd_pwsh_bin(){ command powershell.exe "$@"; }
+    elif [ -x /mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/PowerShell.exe ]; then
+        ___x_cmd_pwsh_bin(){ /mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/PowerShell.exe "$@"; }
+    elif [ -x /c/WINDOWS/System32/WindowsPowerShell/v1.0/PowerShell.exe ]; then
+        ___x_cmd_pwsh_bin(){ /c/WINDOWS/System32/WindowsPowerShell/v1.0/PowerShell.exe "$@"; }
+    elif command -v pwsh 1>/dev/null; then
+        ___x_cmd_pwsh_bin(){ command pwsh "$@"; }
+    elif command -v pssh 1>/dev/null; then
+        ___x_cmd_pwsh_bin(){ command pssh "$@"; }
+    elif command -v docker 1>/dev/null; then
+        ___x_cmd_pwsh_bin(){ command docker run --rm -it mcr.microsoft.com/powershell "$@"; }
+        # docker run --rm -it xcmd/pwsh
+    else
+        pwsh:error "Cannot start pwsh for pwsh or docker command is unavailable."
+        return 1
+    fi
+
+    ___x_cmd_pwsh_bin "$@"
+}
+
+# C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat

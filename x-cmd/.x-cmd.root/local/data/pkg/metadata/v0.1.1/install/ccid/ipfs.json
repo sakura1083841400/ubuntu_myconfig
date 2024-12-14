@@ -1,0 +1,18 @@
+{
+  "lang": null,
+  "homepage": "https://ipfs.tech/",
+  "desc": {
+    "cn": "IPFS 是一个开放的系统，可以管理没有中央服务器的数据",
+    "en": "IPFS is an open system to manage data without a central server"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install ipfs",
+      "reference": "https://formulae.brew.sh/formula/ipfs#default"
+    },
+    "arch/pacman": {
+      "cmd": "sudo pacman -S go-ipfs",
+      "reference": "https://command-not-found.com/ipfs"
+    }
+  }
+}

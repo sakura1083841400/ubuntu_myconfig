@@ -1,0 +1,18 @@
+{
+  "lang": "Python",
+  "homepage": "https://github.com/gleitz/howdoi",
+  "desc": {
+    "cn": "通过命令行即时编码答案",
+    "en": "instant coding answers via the command line"
+  },
+  "rule": {
+    "/pip": {
+      "cmd": "pip install howdoi",
+      "reference": "https://github.com/gleitz/howdoi#installation"
+    },
+    "darwin/brew": {
+      "cmd": "brew install howdoi",
+      "reference": "https://github.com/gleitz/howdoi#installation"
+    }
+  }
+}

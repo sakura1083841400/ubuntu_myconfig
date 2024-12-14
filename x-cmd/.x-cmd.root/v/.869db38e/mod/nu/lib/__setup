@@ -1,0 +1,61 @@
+# shellcheck shell=dash disable=2016
+
+___x_cmd_nu___setup(){
+    local xnunrc_dir="$HOME/.x-cmd.root/local/data/nu"
+    ___x_cmd mkdirp "$xnunrc_dir"
+    ___x_cmd cp -f "$___X_CMD_ROOT_MOD/nu/lib/rc/rc.nu"     "$xnunrc_dir/rc.nu"
+    ___x_cmd cp -f "$___X_CMD_ROOT_MOD/nu/lib/rc/advise.nu" "$xnunrc_dir/advise.nu"
+
+    # local home_rcfile="$HOME/dotfiles/nushell/nushell"
+    local x_
+    ___x_cmd_nu___boot_init_rcfile_ || return
+    ___x_cmd ensurefp "$x_"
+
+    if [ ! -f "$x_" ]; then
+        ___x_cmd_nu___boot_init_defaultinit
+        [ -f "$x_" ] || N=nu M="Fail to init an rc file -> $x_" log:ret:1
+    fi
+
+    ___x_cmd boot initrcfile1  "$___X_CMD_NU_SETUP_RCCODE"     "$x_"
+}
+
+___x_cmd_nu___boot_init_rcfile_home_(){
+    ___x_cmd os name_
+    case "$x_" in
+        win)    case "$HOME" in
+                    */Users/*)  x_="${HOME%%/Users/*}:/Users/${HOME#*/Users/}"
+                                x_="${x_#/}"    ;;
+                    *)          x_="";
+                                nu:error "Unexpected format of HOME folder -> $HOME"
+                                return 1
+                esac ;;
+        *)      x_="$HOME"
+    esac
+}
+
+___x_cmd_nu___boot_init_rcfile_(){
+
+    ___x_cmd_nu___boot_init_rcfile_home_ || return
+    local nufp="$x_/.x-cmd.root/local/data/nu/rc.nu"
+    local advfp="$x_/.x-cmd.root/local/data/nu/advise.nu"
+
+    # local X_STR='if ( $"($env.HOME)/.x-cmd.root/local/data/nu/rc.nu" | path exists ) { source "'"$nufp"'"; } # boot up x-cmd.'
+    # local X_STR='if ( $"($env.HOME)/.x-cmd.root/local/data/nu/rc.nu" | path exists ) { use "'"$nufp"'" *; } # boot up x-cmd.'
+    ___X_CMD_NU_SETUP_RCCODE='use "'"$nufp"'" *;  if ___X_CMD_ADVISE_ACTIVATION_ON_NON_POSIX_SHELL in $env and $env.___X_CMD_ADVISE_ACTIVATION_ON_NON_POSIX_SHELL == "1" { source "'"$advfp"'"; }; # boot up x-cmd.'
+
+    x_="$(___x_cmd_nu___binexec nu -c '$nu.env-path')"
+}
+
+___x_cmd_nu___setup_is_required(){
+    local x_;   ___x_cmd_nu___boot_init_rcfile_ || return;   local rcfile="$x_"
+    ! {
+        ___x_cmd boot ensurerccodewithoutextra  \
+                                "$___X_CMD_NU_SETUP_RCCODE"                 "$rcfile"                               && \
+            ___x_cmd_cmds cmp   "$___X_CMD_ROOT_MOD/nu/lib/rc/rc.nu"        "$HOME/.x-cmd.root/local/data/nu/rc.nu" && \
+            ___x_cmd_cmds cmp   "$___X_CMD_ROOT_MOD/nu/lib/rc/advise.nu"    "$HOME/.x-cmd.root/local/data/nu/advise.nu"
+    } 1>/dev/null 2>/dev/null
+}
+
+___x_cmd_nu___boot_init_defaultinit(){
+    printf "Y\n" | ___x_cmd_nu___binexec nu 1>/dev/null 2>/dev/null
+}

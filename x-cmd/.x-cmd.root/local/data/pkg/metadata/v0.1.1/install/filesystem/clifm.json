@@ -1,0 +1,18 @@
+{
+  "lang": "C",
+  "homepage": "https://github.com/leo-arch/clifm/wiki",
+  "desc": {
+    "cn": "Clifm 是 Unix 终端的命令行界面文件管理器",
+    "en": "Clifm is a Command Line Interface File Manager for the Unix terminal"
+  },
+  "rule": {
+    "darwin/port": {
+      "cmd": "sudo port install clifm",
+      "reference": "https://github.com/leo-arch/clifm/wiki/Introduction#small_blue_diamond-f-macos"
+    },
+    "darwin/brew": {
+      "cmd": "brew install clifm",
+      "reference": "https://formulae.brew.sh/formula/clifm#default"
+    }
+  }
+}

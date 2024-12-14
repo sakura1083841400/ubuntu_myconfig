@@ -1,0 +1,2 @@
+#! /bin/sh
+ "/home/eruka/.x-cmd.root/local/data/pkg/sphere/X/tree.linux.x64.0/fzf/v0.55.0/bin/fzf"  "$@"

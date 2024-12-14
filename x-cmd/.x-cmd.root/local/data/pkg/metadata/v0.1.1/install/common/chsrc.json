@@ -1,0 +1,22 @@
+{
+  "lang": "C",
+  "homepage": "https://github.com/RubyMetric/chsrc",
+  "desc": {
+    "cn": "全平台命令行换源工具",
+    "en": "Full platform command line source swap tool"
+  },
+  "rule": {
+    "win/curl": {
+      "cmd": "curl -L https://gitee.com/RubyMetric/chsrc/releases/download/preview/chsrc-x64-windows.exe -o chsrc.exe",
+      "reference": "curl -L https://gitee.com/RubyMetric/chsrc/releases/download/preview/chsrc-x64-windows.exe -o chsrc.exe"
+    },
+    "linux/curl": {
+      "cmd": "curl -L https://gitee.com/RubyMetric/chsrc/releases/download/preview/chsrc-x64-linux -o chsrc; chmod +x ./chsrc",
+      "reference": "https://github.com/RubyMetric/chsrc?tab=readme-ov-file#linux"
+    },
+    "darwin/curl": {
+      "cmd": "curl -L https://gitee.com/RubyMetric/chsrc/releases/download/preview/chsrc-x64-macos -o chsrc; chmod +x ./chsrc",
+      "reference": "https://github.com/RubyMetric/chsrc?tab=readme-ov-file#macos"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+url_cn=https://github.com/x-cmd-build/fzf/releases/download/0.55.0/linux.x64.0.tar.xz
+download_file_ext=tar.xz
+unpack=folder

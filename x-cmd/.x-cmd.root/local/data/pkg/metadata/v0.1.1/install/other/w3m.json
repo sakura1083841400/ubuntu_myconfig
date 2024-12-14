@@ -1,0 +1,14 @@
+{
+  "lang": "C",
+  "homepage": "https://w3m.sourceforge.net/",
+  "desc": {
+    "en": "A text-based web browser",
+    "cn": "一个基于文本的网页浏览器"
+  },
+  "rule": {
+    "darwin/brew": {
+      "cmd": "brew install w3m",
+      "reference": "https://formulae.brew.sh/formula/w3m"
+    }
+  }
+}

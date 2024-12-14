@@ -1,0 +1,3 @@
+url_cn=https://github.com/x-cmd-build/fd/releases/download/10.1.0/linux.x64.glib.tar.xz
+download_file_ext=tar.xz
+unpack=folder

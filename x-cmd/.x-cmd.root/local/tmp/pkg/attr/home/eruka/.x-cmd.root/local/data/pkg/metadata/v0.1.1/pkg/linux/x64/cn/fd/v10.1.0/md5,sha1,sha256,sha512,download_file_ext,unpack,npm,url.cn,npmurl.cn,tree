@@ -1,0 +1,10 @@
+md5=
+sha1=
+sha256=b17c7f941666df7928133088e87cd12f7aabcf885c0c5fffc70ba89944beab5c
+sha512=
+download_file_ext=tar.xz
+unpack=folder
+npm=yes
+url_cn=https://github.com/x-cmd-build/fd/releases/download/10.1.0/linux.x64.glib.tar.xz
+npmurl_cn=https://registry.npmmirror.com/@x-cmd-pkg/fd/-/fd-0.0.0-v10.1.0-linux.x64.glib.tgz
+tree=linux.x64.glib

@@ -1,0 +1,71 @@
+# shellcheck shell=dash disable=SC2034
+
+___x_cmd log init theme
+
+xrc htag/latest
+xrc term
+
+xrc:mod:lib     theme       \
+    envinit ls util comp/_index control style/_index envy feature/_index boot/theme.unit
+
+if ___x_cmd_is_suitable_advise_env; then
+    xrc:mod:lib theme    advise
+fi
+
+
+___x_cmd_theme_main(){
+    local X_help_cmd=;  X_help_cmd='x help -m theme' help:arg:parse
+    local op="$1"
+    case "$op" in
+        --app)
+                        xrc:mod:lib theme app/_index
+                        ___x_cmd_theme_control_app "$@"             ;;
+        ls|current|update|\
+        feature|envy|reload)
+                        shift; ___x_cmd_theme_"$op" "$@"            ;;
+
+        use|unuse|\
+        try|untry|\
+        font)
+                        shift; "___x_cmd_theme_control_$op" "$@"    ;;
+        --rc-load)      shift; ___x_cmd_theme_rc_load "$@"          ;;
+        --advise-ls)    shift; ___x_cmd_theme_advise_ls_name "$@"   ;;
+        --get_valid_name_)
+                        shift; ___x_cmd_theme___get_valid_name_ "$@" ;;
+
+        --co|,)         shift; X_CO_MSHOT_CMD="x theme" ___x_cmd co --mshot "$@" ;;
+        -h|--help)      ___x_cmd help -m  theme                     ;;
+        *)
+                        if [ -t 1 ] && ___x_cmd_is_interactive; then
+                            xrc:mod:lib theme app/nv
+                            ___x_cmd_theme_nv
+                        else
+                            ___x_cmd help -m theme >&2
+                            return 64
+                        fi
+                        ;;
+        esac
+}
+
+___x_cmd_theme_rc_load(){
+    xrc:mod:lib     theme       widget/_index       theme/mini/_index
+    local name="${1:-l}"
+    local x_file=
+    ___x_cmd_theme_which___getfile_ "$name" || N=theme M="Not found theme '$name' file" log:ret:64
+
+    ___x_cmd_theme_feature_reload
+    ___x_cmd_theme_load_format "$x_file"
+}
+
+___x_cmd_theme_current(){
+    local x_
+    x_=; ___x_cmd_theme_boot current_vendor_get_ || N=theme M="Not found current prompt theme vendor" log:ret:1
+    local vendor="$x_"
+
+    x_=; ___x_cmd_theme_boot current_name_get_ || N=theme M="Not found current prompt theme name" log:ret:1
+    local name="$x_"
+
+    ___x_cmd_theme_boot current_style_ "$vendor" "$name"
+    printf "%s\n" "vendor: $vendor" "name: $name"
+}
+
